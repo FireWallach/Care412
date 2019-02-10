@@ -9,8 +9,6 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
-import pkg412proj.MedicalReport;
-import pkg412proj.User;
 
 /**
  * FXML Controller class

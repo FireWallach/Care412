@@ -8,7 +8,6 @@ package pkg412proj;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
-import pkg412proj.User;
 
 /**
  * FXML Controller class

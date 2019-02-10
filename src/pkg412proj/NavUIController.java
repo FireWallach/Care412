@@ -16,12 +16,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
-import pkg412proj.NavigationManager;
 
 /**
  * FXML Controller class
@@ -73,7 +71,6 @@ public class NavUIController implements Initializable {
         try{
             root = FXMLLoader.load(url);
         } catch(IOException ex){
-            ex.printStackTrace();
         }
         NavigationManager.getInstance(stage).showScene(root);
     }
@@ -94,7 +91,6 @@ public class NavUIController implements Initializable {
         try{
             root = FXMLLoader.load(url);
         } catch(IOException ex){
-            ex.printStackTrace();
         }
         NavigationManager.getInstance(stage).showScene(root);
     }

@@ -22,8 +22,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import pkg412proj.User;
-import pkg412proj.UserList;
 
 
 public class LoginUIController implements Initializable {
