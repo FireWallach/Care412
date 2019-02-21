@@ -58,8 +58,8 @@ public class LoginUIController implements Initializable {
         URL url = new File("src/pkg412proj/NavUI.fxml").toURI().toURL();
         
         ul = new UserList();
-        ul.add(new User("admin", "password",0,"","",0));
-        ul.add(new User("", "",0,"","",0));
+        ul.add(new User("admin", "password", 0, "", "", 0));
+        ul.add(new User("", "", 0 , "", "", 0));
         if(checkUsers(ul)){
             stage = (Stage) pf.getScene().getWindow();
             try{
