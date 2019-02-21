@@ -39,4 +39,8 @@ public class MedicalUIController implements Initializable {
         //TODO: Write logic to edit medical information.
     }
     
+    public void loadData(User user){
+        return;
+    }
+    
 }
