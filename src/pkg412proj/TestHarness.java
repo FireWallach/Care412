@@ -40,4 +40,26 @@ public class TestHarness {
         }
     }
     
+    public void testPersonalUIController(){
+        PersonalUIController personalUI = new PersonalUIController();
+        User testUser = new User("","");
+        
+        //testing PersonalUIController.getUser()
+        if (personalUI.getUser() == null){
+            System.out.println("getUser passed");
+        }
+        else {
+            System.out.println("getUser failed");
+        }
+        // testing PersonalUIController.setUser()
+        personalUI.setUser(testUser); // <-- Temporaily sets the user value to the Test User
+        if (personalUI.getUser().equals(personalUI.getUser())){
+            System.out.println("setUser passed");
+        }
+        else {
+            System.out.println("setUser failed");
+        }
+        personalUI.setUser(null); // <-- Returns the value of user to the original value of null
+    }
+    
 }
