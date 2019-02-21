@@ -22,6 +22,14 @@ public class TestHarness {
         this.testPersonalUIController();
         this.testUserListAdd();
         this.testUserListGet();
+        this.testGetUsername();
+        this.testSetUsername();
+        this.testGetPassword();
+        this.testSetPassword();
+        this.testGetAge();
+        this.testSetAge();
+        this.testGetFirstName();
+        this.testSetFirstName();
     }
     
     public void testGetUserList(){
@@ -82,6 +90,82 @@ public class TestHarness {
             System.out.println("setUser failed");
         }
         personalUI.setUser(null); // <-- Returns the value of user to the original value of null
+    }
+    
+    public void testGetUsername(){
+        User testUser = new User("un", "pw", 4, "fname", "lname",0);
+        if(testUser.getUsername().equals("un")) {
+            System.out.println("testGetUsername Passed");
+        } else {
+            System.out.println("testGetUsername Failed");
+        }
+    }
+    
+    public void testSetUsername(){
+        User testUser = new User("un", "pw", 4, "fname", "lname",0);
+        testUser.setUsername("newUn");
+        if(testUser.getUsername().equals("newUn")) {
+            System.out.println("testSetUsername Passed");
+        } else {
+            System.out.println("testSetUsername Failed");
+        }
+    }
+    
+    public void testGetPassword(){
+        User testUser = new User("un", "pw", 4, "fname", "lname",0);
+        if(testUser.getPassword().equals("pw")) {
+            System.out.println("testGetPassword Passed");
+        } else {
+            System.out.println("testGetPassword Failed");
+        }
+    }
+    
+    public void testSetPassword(){
+        User testUser = new User("un", "pw", 4, "fname", "lname",0);
+        testUser.setPassword("newPw");
+        if(testUser.getPassword().equals("newPw")) {
+            System.out.println("testSetPassword Passed");
+        } else {
+            System.out.println("testSetPassword Failed");
+        }
+    }
+    
+    public void testGetAge(){
+        User testUser = new User("un", "pw", 4, "fname", "lname",0);
+        if(testUser.getAge() == 4) {
+            System.out.println("testGetAge Passed");
+        } else {
+            System.out.println("testGetAge Failed");
+        }
+    }
+    
+    public void testSetAge(){
+        User testUser = new User("un", "pw", 4, "fname", "lname",0);
+        testUser.setAge(5);
+        if(testUser.getAge() == 5) {
+            System.out.println("testSetAge Passed");
+        } else {
+            System.out.println("testSetAge Failed");
+        }
+    }
+    
+    public void testGetFirstName(){
+        User testUser = new User("un", "pw", 4, "fname", "lname",0);
+        if(testUser.getFirstName().equals("fname")) {
+            System.out.println("testGetFirstName Passed");
+        } else {
+            System.out.println("testGetFirstName Failed");
+        }
+    }
+    
+    public void testSetFirstName(){
+        User testUser = new User("un", "pw", 4, "fname", "lname",0);
+        testUser.setFirstName("newfname");
+        if(testUser.getFirstName().equals("newfname")) {
+            System.out.println("testSetFirstName Passed");
+        } else {
+            System.out.println("testSetFirstName Failed");
+        }
     }
     
 }
