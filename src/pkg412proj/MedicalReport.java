@@ -10,9 +10,9 @@ package pkg412proj;
  * @author Dylan
  */
 public class MedicalReport {
-    private String user; //The user the report is on
+    private String user;     //The user the report is on
     private String testType; //Describes what's being tested for
-    private String result; //Says what the result is
+    private String result;   //Says what the result is
 
     /**
      * @return the user

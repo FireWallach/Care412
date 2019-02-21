@@ -13,7 +13,20 @@ package pkg412proj;
 public class TestHarness {
     
     public static void main(String[] args){
-        
+        TestHarness th = new TestHarness();
+    }
+    
+    public TestHarness(){
+        testGetUserList();
+    }
+    
+    public void testGetUserList(){
+        UserList ul = new UserList();
+        if(ul.getUserList().isEmpty()){
+            System.out.println("getUserList Passed.");
+        } else{
+            System.out.println("getUserList Failed.");
+        }
     }
     
 }
