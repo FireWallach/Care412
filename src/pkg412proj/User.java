@@ -23,9 +23,13 @@ public class User {
      * @param username
      * @param password
      */
-    public User(String username, String password){
+    public User(String username, String password, int age, String firstName, String lastName, int clearenceLevel){
         this.username = username;
         this.password = password;
+        this.age = age;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.clearenceLevel = clearenceLevel;
     }
 
     /**

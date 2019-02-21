@@ -18,6 +18,7 @@ public class TestHarness {
     
     public TestHarness(){
         testGetUserList();
+        testSetUserList();
     }
     
     public void testGetUserList(){
@@ -26,6 +27,16 @@ public class TestHarness {
             System.out.println("getUserList Passed.");
         } else{
             System.out.println("getUserList Failed.");
+        }
+    }
+    
+    public void testSetUserList(){
+        
+        User user = new User("un", "pw", 4, "fname", "lname",0);
+        UserList ul = new UserList();
+        ul.add(user);
+        if(ul.get(0).equals(user)){
+            System.out.println("setUserList passed.");
         }
     }
     
