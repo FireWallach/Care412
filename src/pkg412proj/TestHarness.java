@@ -81,7 +81,7 @@ public class TestHarness {
         else {
             System.out.println("getUser failed");
         }
-        // testing PersonalUIController.setUser()
+        // testing PersonalUIController.setUser() //
         personalUI.setUser(testUser); // <-- Temporaily sets the user value to the Test User
         if (personalUI.getUser().equals(personalUI.getUser())){
             System.out.println("setUser passed");
