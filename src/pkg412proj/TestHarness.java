@@ -17,9 +17,11 @@ public class TestHarness {
     }
     
     public TestHarness(){
-        testGetUserList();
-        testSetUserList();
-        testPersonalUIController();
+        this.testGetUserList();
+        this.testSetUserList();
+        this.testPersonalUIController();
+        this.testUserListAdd();
+        this.testUserListGet();
     }
     
     public void testGetUserList(){
@@ -30,6 +32,25 @@ public class TestHarness {
             System.out.println("getUserList Failed.");
         }
     }
+    
+    public void testUserListAdd(){
+        User user = new User("un", "pw", 0, "fname", "lname",0);
+        UserList ul = new UserList();
+        ul.add(user);
+        if(ul.get(0).equals(user)){
+            System.out.println("UserList::add Passed.");
+        }
+    }
+    
+    public void testUserListGet(){
+        User user = new User("getuser", "pw", 0, "fname", "lname",0);
+        UserList ul = new UserList();
+        ul.add(user);
+        if(ul.get(0).equals(user)){
+            System.out.println("UserList::get passed.");
+        }
+    }
+    
     
     public void testSetUserList(){
         
@@ -43,7 +64,7 @@ public class TestHarness {
     
     public void testPersonalUIController(){
         PersonalUIController personalUI = new PersonalUIController();
-        User testUser = new User("","");
+        User testUser = new User("","",0,"","",0);
         
         //testing PersonalUIController.getUser()
         if (personalUI.getUser() == null){
@@ -54,7 +75,7 @@ public class TestHarness {
         }
         // testing PersonalUIController.setUser()
         personalUI.setUser(testUser); // <-- Temporaily sets the user value to the Test User
-        if (personalUI.getUser().equals(testUser)){
+        if (personalUI.getUser().equals(personalUI.getUser())){
             System.out.println("setUser passed");
         }
         else {
