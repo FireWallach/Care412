@@ -30,6 +30,10 @@ public class TestHarness {
         this.testSetAge();
         this.testGetFirstName();
         this.testSetFirstName();
+        this.testGetLastName();
+        this.testSetLastName();
+        this.testGetClearanceLevel();
+        this.testSetClearanceLevel();
     }
     
     public void testGetUserList(){
@@ -165,6 +169,44 @@ public class TestHarness {
             System.out.println("testSetFirstName Passed");
         } else {
             System.out.println("testSetFirstName Failed");
+        }
+    }
+    
+    public void testGetLastName(){
+        User testUser = new User("un", "pw", 4, "fname", "lname",0);
+        if(testUser.getLastName().equals("lname")) {
+            System.out.println("testGetLastName Passed");
+        } else {
+            System.out.println("testGetLastName Failed");
+        }
+    }
+    
+    public void testSetLastName(){
+        User testUser = new User("un", "pw", 4, "fname", "lname",0);
+        testUser.setLastName("newlname");
+        if(testUser.getLastName().equals("newlname")) {
+            System.out.println("testSetLastName Passed");
+        } else {
+            System.out.println("testSetLastName Failed");
+        }
+    }
+    
+    public void testGetClearanceLevel(){
+        User testUser = new User("un", "pw", 4, "fname", "lname",0);
+        if(testUser.getClearanceLevel() == 0) {
+            System.out.println("testGetClearanceLevel Passed");
+        } else {
+            System.out.println("testGetClearanceLevel Failed");
+        }
+    }
+    
+    public void testSetClearanceLevel(){
+        User testUser = new User("un", "pw", 4, "fname", "lname",0);
+        testUser.setClearanceLevel(1);
+        if(testUser.getClearanceLevel() == 1) {
+            System.out.println("testSetClearanceLevel Passed");
+        } else {
+            System.out.println("testSetClearanceLevel Failed");
         }
     }
     

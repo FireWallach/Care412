@@ -16,20 +16,20 @@ public class User {
     private String firstName; //Legal first name of the user
     private String lastName; //Legal Last name of the user
     //Clearance: patient=0, doctor=1, admin=2
-    private Integer clearenceLevel; //describes what information the logged in user has access to. 
+    private Integer clearanceLevel; //describes what information the logged in user has access to. 
     
     /**
      *
      * @param username
      * @param password
      */
-    public User(String username, String password, int age, String firstName, String lastName, int clearenceLevel){
+    public User(String username, String password, int age, String firstName, String lastName, int clearanceLevel){
         this.username = username;
         this.password = password;
         this.age = age;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.clearenceLevel = clearenceLevel;
+        this.clearanceLevel = clearanceLevel;
     }
 
     /**
@@ -105,14 +105,14 @@ public class User {
     /**
      * @return the clearenceLevel
      */
-    public Integer getClearenceLevel() {
-        return clearenceLevel;
+    public Integer getClearanceLevel() {
+        return clearanceLevel;
     }
 
     /**
      * @param clearenceLevel the clearenceLevel to set
      */
-    public void setClearenceLevel(Integer clearenceLevel) {
-        this.clearenceLevel = clearenceLevel;
+    public void setClearanceLevel(Integer clearanceLevel) {
+        this.clearanceLevel = clearanceLevel;
     }
 }
